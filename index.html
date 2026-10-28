@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador de arquitectura de computadores</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top">
+  <div><h1>Simulador de arquitectura de computadores</h1><p>Observa cómo se transfieren, almacenan y recuperan los datos.</p></div>
+  <div class="top-actions"><button id="btn-home" type="button">Inicio</button><button id="btn-reset" type="button">Reiniciar simulación</button></div>
+</header>
+<nav id="module-menu" class="tabs" aria-label="Módulos"></nav>
+<main>
+  <section id="home"><h2>Elige un módulo</h2><div id="home-cards" class="cards"></div></section>
+  <section id="workspace" hidden>
+    <h2 id="module-title"></h2>
+    <div id="scenario-menu" class="subtabs" aria-label="Escenarios del módulo"></div>
+    <div class="grid">
+      <div class="sim">
+        <svg id="diagram" role="img" aria-label="Diagrama interactivo de componentes conectados por el bus"></svg>
+        <div id="stage" hidden></div>
+        <div id="controls"></div>
+        <div id="calc" hidden></div>
+      </div>
+      <aside>
+        <section class="panel"><h3>Explicación</h3><dl id="explanation" aria-live="polite"></dl></section>
+        <section class="panel"><h3>Estadísticas</h3><div id="stats"></div></section>
+        <section class="panel"><div class="panel-head"><h3>Registro de eventos</h3><button id="btn-clear-log" type="button">Limpiar historial</button></div><ol id="log"></ol></section>
+      </aside>
+    </div>
+  </section>
+</main>
+<script src="js/utils/formatters.js"></script>
+<script src="js/utils/structures.js"></script>
+<script src="js/components/diagram.js"></script>
+<script src="js/components/stage.js"></script>
+<script src="js/components/explanations.js"></script>
+<script src="js/simulations/simulation-base.js"></script>
+<script src="js/components/controls.js"></script>
+<script src="js/simulations/bus-simulation.js"></script>
+<script src="js/simulations/bus-mastering-simulation.js"></script>
+<script src="js/simulations/arbitration-simulation.js"></script>
+<script src="js/simulations/bandwidth-calculator.js"></script>
+<script src="js/simulations/buffer-simulation.js"></script>
+<script src="js/simulations/buffer-compare-simulation.js"></script>
+<script src="js/simulations/buffer-ring-simulation.js"></script>
+<script src="js/simulations/buffer-sync-simulation.js"></script>
+<script src="js/simulations/cache-simulation.js"></script>
+<script src="js/simulations/cache-locality-simulation.js"></script>
+<script src="js/simulations/eat-calculator.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
